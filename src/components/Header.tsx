@@ -21,6 +21,7 @@ export const Header: FC<{
             <div className="w-full items-start flex flex-col gap-1">
               {graphs.map((g, i) => (
                 <button
+                  key={i}
                   className={`${i !== 0 && 'border-b border-zinc-800'} w-full flex items-center px-4 py-2 transition-colors hover:bg-zinc-800 cursor-pointer`}
                   onClick={() => {
                     setActiveGraph(g);

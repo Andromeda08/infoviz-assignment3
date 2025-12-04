@@ -22,7 +22,10 @@ export const Header: FC<{
               {graphs.map((g, i) => (
                 <button
                   className={`${i !== 0 && 'border-b border-zinc-800'} w-full flex items-center px-4 py-2 transition-colors hover:bg-zinc-800 cursor-pointer`}
-                  onClick={() => setActiveGraph(g)}
+                  onClick={() => {
+                    setActiveGraph(g);
+                    console.log(g);
+                  }}
                 >
                   <ChevronRightIcon className="w-4 h-4 mr-1" />{g.inputGraphName}
                 </button>
